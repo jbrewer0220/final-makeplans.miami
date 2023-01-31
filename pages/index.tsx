@@ -22,10 +22,10 @@ const Home: NextPage = () => {
 
   const prompt =
     vibe === "Restaurant"
-      ? `Generate 2 questions that I can ask my close friend that will invoke conversation, clearly labeled "1." and "2.". Make sure it will invoke positive conversation. Make sure each generated idea is at max 50 words and base it on this context: ${bio}${
+      ? `Generate 2 cold emails to send to a potential customer named restaurant. Make sure each generated idea is at max 50 words and format it the same as: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
-      : `Generate 2 questions that I can ask my close friend that will invoke conversation,, clearly labeled "1." and "2.". Make sure it will invoke positive conversation. Make sure each generated idea is at least 14 words and at max 50 words and base the it on this context: ${bio}${
+      : `Generate 2 cold emails to send to a potential customer named ${vibe}$. Make sure each generated idea is at max 50 words and format it the same as: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`;
 
