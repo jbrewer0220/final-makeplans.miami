@@ -119,7 +119,7 @@ const Home: NextPage = () => {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
 
         <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
-          Don't know where to go tonight? We got you covered.
+          Your AI Assitant for Making Plans
         </h1>
         <p className="text-slate-500 mt-5">18,167 Plans generated so far.</p>
         <div className="max-w-xl">
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Where are you and what do you want to do{" "}
+              What do you want to do{" "}
               <span className="text-slate-500">
                 (no rules, write anything!)
               </span>
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
             rows={2}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "Get drinks in Buffalo, New York"
+              "Get drinks with a view"
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate some plans &rarr;
+              Make Plans &rarr;
             </button>
           )}
           {loading && (
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
                 <>
                   <div>
                     <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
-                      Your generated plans - text them to your friends!
+                      Now send the invite!
                     </h2>
                   </div>
                   <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -196,7 +196,6 @@ const Home: NextPage = () => {
                       .map((generatedBio, index) => {
                         return (
                           <>
-                            {index === 1 && <p>OpenTable Sponsored Plan:</p>}
                             <div
                               className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                               onClick={() => {
