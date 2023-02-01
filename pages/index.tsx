@@ -13,19 +13,19 @@ import ResizablePanel from "../components/ResizablePanel";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<"Restaurant" | "Club" | "Outdoors">(
-    "Restaurant"
+  const [vibe, setVibe] = useState<"Friends" | "Family" | "Date">(
+    "Friends"
   );
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   console.log("Streamed response: ", generatedBios);
 
   const prompt =
-    vibe === "Restaurant"
-      ? `Generate 2 cold emails to send to a potential customer named restaurant. Make sure each generated idea is at max 50 words and format it the same as: ${bio}${
+    vibe === "Friends"
+      ? `Generate 2 ideas for plans I can do with my friends, clearly labeled "1." and "2.". Make sure there is a specific location in Miami, FL. Make sure to provide a location nearby to go afterwards that is within a mile. Make sure it's written in a format as a text to friends. Make sure each plan has 2 parts Make it witty. Make sure each generated idea is at max 50 words and base it on this context: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
-      : `Generate 2 cold emails to send to a potential customer named ${vibe}$. Make sure each generated idea is at max 50 words and format it the same as: ${bio}${
+      : `Generate 2 ideas for plans I can do with my ${vibe} clearly labeled "1." and "2.". Make sure there is a specific location in Miami, FL. Make sure the plans fit something a ${vibe} would do. Make sure to provide a location nearby to go afterwards that is within a mile. Make it witty. Make sure it's written in a format as a text to friends. Make sure each generated idea is at least 14 words and at max 50 words and base the it on this context: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`;
 
