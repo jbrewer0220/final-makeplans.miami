@@ -210,7 +210,7 @@ const Home: NextPage = () => {
                               <p>{generatedBio}</p>
                             </div>
                             <button onClick={() => {
-                                window.open(`sms:&body=${generatedBio}`);
+                                window.open(`sms:&body=${generatedBio}+"Make more plans here: https://www.makeplans.miami/"`);
                                 toast("Opened in iMessage", {
                                   icon: "💬",
                                 });
