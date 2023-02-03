@@ -182,6 +182,7 @@ const Home: NextPage = () => {
         <ResizablePanel>
           <AnimatePresence mode="wait">
             <motion.div className="space-y-10 my-10">
+              <>
               {generatedBios && !loading && (
                 <>
                   <div>
@@ -189,7 +190,6 @@ const Home: NextPage = () => {
                       Now send the invite!
                     </h2>
                   </div>
-                 
                   <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                     {generatedBios
                       .substring(generatedBios.indexOf("1") + 3)
